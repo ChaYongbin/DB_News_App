@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *inputID;
+@property (weak, nonatomic) IBOutlet UITextField *inputPassword;
 
 @end
 
@@ -22,6 +24,38 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)register:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController* controller = [storyboard instantiateViewControllerWithIdentifier:@"register"];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)login:(id)sender {
+    
+    BOOL correct;
+    
+    correct = YES;
+    
+    if (correct == YES) {
+        @autoreleasepool {
+            ViewController *nextView=[[ViewController alloc] init];
+            [UIView  beginAnimations:nil context:NULL];
+            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+            [UIView setAnimationDuration:0.75];
+            [self.navigationController pushViewController:nextView animated:NO];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+            [UIView commitAnimations];
+        }
+       
+    }
+    else {
+        self.inputID.textColor = [UIColor redColor];
+        self.inputID.text = @"다시 입력해주세요.";
+    }
 }
 
 @end
