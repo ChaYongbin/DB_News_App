@@ -97,7 +97,7 @@ def news():
 
 	check_e = cursor.fetchone()
 
-	print('news result is ' + check_e)
+	print(check_e)
 
 	if check_e != None:
 		#result 값이 올바를 경우에만 결과값을 리턴
@@ -117,7 +117,7 @@ def comment():
 	for row in cursor:
 		result.append(dict(zip(colums, row)))
 
-	print('comment result is '+ result)
+	print(result)
 
 	if resultv != None:
 		return json.dumps(result)
