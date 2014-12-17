@@ -9,7 +9,12 @@
 #import "NXNewsTableViewController.h"
 #import "NXNewsTableViewCell.h"
 
-@interface NXNewsTableViewController ()
+@interface NXNewsTableViewController () {
+    NSMutableArray * myObject;
+    NSDictionary * dictionary;
+    NSString * title;
+    NSString * link;
+}
 
 @end
 
@@ -17,6 +22,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    title = @"title";
+    link = @"link";
+    
+    myObject = [[NSMutableArray alloc] init];
+    
+//    NSString * URLString = @"http://10.73.45.55:5000/register/email";
+//    NSString * FormData = [NSString stringWithFormat:@"email=%@",email];
+//    NSURL * url = [NSURL URLWithString:URLString];
+//    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+//    
+//    [request setHTTPMethod:@"POST"];
+//    [request setHTTPBody:[FormData dataUsingEncoding:NSUTF8StringEncoding]];
+//    
+//    NSHTTPURLResponse * response;
+//    NSError * error;
+//    NSData * resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//    
+//    NSString * result = [NSString stringWithUTF8String:resultData.bytes];
+//    //result = [NSString stringWithFormat:@"%s"];
+//    
+//    NSLog(@"response = %ld", (long)response.statusCode);
+//    NSLog(@"result = %@", result);
+    
+    NSString * URLString = @"http://10.73.45.55:5000/news";
+    
+    NSData * jsonSoure = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://10.73.45.55:5000/news"]];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
