@@ -93,16 +93,20 @@ def Connect_Test():
 @app.route('/news', methods=['POST'])
 def news():
 	cursor = connectDB()
-	cursor.execute("SELECT title, img_path FROM article;")
+	cursor.execute('SELECT title, img_path FROM article;')
 
-	check_e = cursor.fetchone()
+	result = []
 
-	print(check_e)
+	colums = tuple(d[0] for d in cursor.description)
 
-	if check_e != None:
-		#result 값이 올바를 경우에만 결과값을 리턴
-		return json.dumps(check_e)
-	return 'Get news Error'
+	for row in cursor:
+		result.append(dict(zip(colums, row)))
+
+	print(result)
+
+	if result != None:
+		return json.dumps(result)
+	return 'Get comment Error'
 
 
 @app.route('/news/comment', methods=['GET','POST'])
