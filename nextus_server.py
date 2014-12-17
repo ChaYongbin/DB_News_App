@@ -119,7 +119,7 @@ def comment():
 
 	print(result)
 
-	if resultv != None:
+	if result != None:
 		return json.dumps(result)
 	return 'Get comment Error'
 
