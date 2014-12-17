@@ -90,7 +90,7 @@ def Connect_Test():
 	return 'Fail Connect Server'
 
 #News Data Get and Push
-@app.route('/news', methods=['POST'])
+@app.route('/news', methods=['GET','POST'])
 def news():
 	cursor = connectDB()
 	cursor.execute('SELECT title, img_path FROM article;')
@@ -106,7 +106,7 @@ def news():
 
 	if result != None:
 		return json.dumps(result)
-	return 'Get comment Error'
+	return 'Get Error'
 
 
 @app.route('/news/comment', methods=['GET','POST'])
