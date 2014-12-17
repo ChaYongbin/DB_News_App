@@ -14,6 +14,8 @@
 		344D29AA1A250B5E00C490F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344D29A91A250B5E00C490F1 /* Images.xcassets */; };
 		344D29AD1A250B5E00C490F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D29AB1A250B5E00C490F1 /* LaunchScreen.xib */; };
 		344D29B91A250B5E00C490F1 /* newsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D29B81A250B5E00C490F1 /* newsAppTests.m */; };
+		34C3EB0D1A422F710099ED3F /* NXNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */; };
+		34C3EB101A4230110099ED3F /* NXNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		344D29B21A250B5E00C490F1 /* newsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		344D29B71A250B5E00C490F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344D29B81A250B5E00C490F1 /* newsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newsAppTests.m; sourceTree = "<group>"; };
+		34C3EB0B1A422F710099ED3F /* NXNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXNewsTableViewCell.h; path = News/NXNewsTableViewCell.h; sourceTree = "<group>"; };
+		34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXNewsTableViewCell.m; path = News/NXNewsTableViewCell.m; sourceTree = "<group>"; };
+		34C3EB0E1A4230110099ED3F /* NXNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXNewsTableViewController.h; path = News/NXNewsTableViewController.h; sourceTree = "<group>"; };
+		34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXNewsTableViewController.m; path = News/NXNewsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 			children = (
 				344D29A01A250B5E00C490F1 /* AppDelegate.h */,
 				344D29A11A250B5E00C490F1 /* AppDelegate.m */,
+				34C3EB0B1A422F710099ED3F /* NXNewsTableViewCell.h */,
+				34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */,
+				34C3EB0E1A4230110099ED3F /* NXNewsTableViewController.h */,
+				34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */,
 				344D29A31A250B5E00C490F1 /* ViewController.h */,
 				344D29A41A250B5E00C490F1 /* ViewController.m */,
 				344D29A61A250B5E00C490F1 /* Main.storyboard */,
@@ -221,6 +231,8 @@
 			files = (
 				344D29A51A250B5E00C490F1 /* ViewController.m in Sources */,
 				344D29A21A250B5E00C490F1 /* AppDelegate.m in Sources */,
+				34C3EB101A4230110099ED3F /* NXNewsTableViewController.m in Sources */,
+				34C3EB0D1A422F710099ED3F /* NXNewsTableViewCell.m in Sources */,
 				344D299F1A250B5E00C490F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +424,7 @@
 				344D29BE1A250B5E00C490F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		344D29BF1A250B5E00C490F1 /* Build configuration list for PBXNativeTarget "newsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				344D29C11A250B5E00C490F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
