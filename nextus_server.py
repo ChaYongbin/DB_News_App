@@ -123,4 +123,10 @@ def comment():
 		return json.dumps(result)
 	return 'Get comment Error'
 
+@app.route("/test", methods=["GET", "POST"])
+def test():
+	return "test load!!";
 
+
+if __name__ == "__main__":
+	app.run(debug=True, host='10.73.45.55', port=5000);
