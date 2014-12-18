@@ -4,7 +4,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 from flask import Flask
 from flaskext.mysql import MySQL
-from bson import json_util
+from datetime import datetime
 from flask import request, session
 from flask_login import LoginManager, login_user, UserMixin, make_secure_token
 from itsdangerous import URLSafeTimedSerializer
@@ -106,7 +106,7 @@ def news():
 	print(result)
 
 	if result != None:
-		return json.dumps(result, default=json_util.default)
+		return json.dumps(result, default=date_handler)
 	return 'Get Error'
 
 
