@@ -19,6 +19,7 @@
 		34C3EB161A4249C60099ED3F /* NXWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB151A4249C60099ED3F /* NXWriteViewController.m */; };
 		34C3EB181A4262AA0099ED3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C3EB171A4262AA0099ED3F /* QuartzCore.framework */; };
 		34C3EB1B1A4263DD0099ED3F /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */; };
+		34C3EB1E1A428B390099ED3F /* NXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		34C3EB171A4262AA0099ED3F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		34C3EB191A4263DD0099ED3F /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
+		34C3EB1C1A428B390099ED3F /* NXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXDetailViewController.h; sourceTree = "<group>"; };
+		34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */,
 				34C3EB141A4249C60099ED3F /* NXWriteViewController.h */,
 				34C3EB151A4249C60099ED3F /* NXWriteViewController.m */,
+				34C3EB1C1A428B390099ED3F /* NXDetailViewController.h */,
+				34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */,
 				34C3EB0E1A4230110099ED3F /* NXNewsTableViewController.h */,
 				34C3EB191A4263DD0099ED3F /* PullRefreshTableViewController.h */,
 				34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */,
@@ -246,6 +251,7 @@
 				34C3EB1B1A4263DD0099ED3F /* PullRefreshTableViewController.m in Sources */,
 				344D29A51A250B5E00C490F1 /* ViewController.m in Sources */,
 				344D29A21A250B5E00C490F1 /* AppDelegate.m in Sources */,
+				34C3EB1E1A428B390099ED3F /* NXDetailViewController.m in Sources */,
 				34C3EB101A4230110099ED3F /* NXNewsTableViewController.m in Sources */,
 				34C3EB0D1A422F710099ED3F /* NXNewsTableViewCell.m in Sources */,
 				34C3EB161A4249C60099ED3F /* NXWriteViewController.m in Sources */,

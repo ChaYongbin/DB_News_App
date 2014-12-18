@@ -8,12 +8,16 @@
 
 #import "NXNewsTableViewController.h"
 #import "NXNewsTableViewCell.h"
+#import "NXDetailViewController.h"
 
 @interface NXNewsTableViewController () {
     NSMutableArray * myObject;
     NSDictionary * dictionary;
     NSString * title;
     NSString * img_path;
+    NSString * contents;
+    NSString * user_email;
+    NSString * time;
 }
 
 @end
@@ -56,6 +60,9 @@
     for (NSDictionary *dataDict in jsonObjects) {
         NSString *title_data = [dataDict objectForKey:@"title"];
         NSString *img_path_data = [dataDict objectForKey:@"img_path"];
+        NSString *contents_data = [dataDict objectForKey:@"contents"];
+        NSString *user_email_data = [dataDict objectForKey:@"user_email"];
+        NSString *time_data = [dataDict objectForKey:@"time"];
         
         NSLog(@"TITLE: %@",title_data);
         NSLog(@"URL: %@",img_path_data);
@@ -63,6 +70,9 @@
         dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                       title_data, title,
                       img_path_data, img_path,
+                      contents_data, contents,
+                      user_email_data, user_email,
+                      time_data, time,
                       nil];
         [myObject addObject:dictionary];
     }
@@ -118,6 +128,26 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [self performSegueWithIdentifier:@"ShowDetail" sender:self];
+//}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NXDetailViewController * _detailView = segue.destinationViewController;
+    NSIndexPath* idxPath = [self.tableView indexPathForSelectedRow];
+    NSDictionary * diction = [myObject objectAtIndex:idxPath.row];
+    
+    _detailView.titleField = [diction objectForKey:@"title"];
+    _detailView.contentsField = [diction objectForKey:@"contents"];
+    _detailView.detail_time = [diction objectForKey:@"time"];
+    
+    
+    NSString* string = [NSString stringWithFormat:
+                        @"%@",[diction objectForKey:@"img_path"]];;
+    _detailView.imageField = string;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

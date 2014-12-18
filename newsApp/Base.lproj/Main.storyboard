@@ -131,7 +131,7 @@
                                 <connections>
                                     <outlet property="news_Img" destination="VAy-jK-Zui" id="XIh-Hc-71N"/>
                                     <outlet property="news_Title" destination="phe-Iy-wgO" id="pi0-AK-0Lu"/>
-                                    <segue destination="uNN-8D-bNN" kind="push" id="Kls-re-tuq"/>
+                                    <segue destination="uNN-8D-bNN" kind="push" id="cT3-la-zq5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -291,23 +291,23 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-PL-vOV">
                                 <rect key="frame" x="94" y="92" width="210" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEQ-qM-LG4">
-                                <rect key="frame" x="94" y="128" width="210" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tc-92-u8p">
+                                <rect key="frame" x="94" y="398" width="210" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIR-e6-UAP">
                                 <rect key="frame" x="94" y="161" width="210" height="227"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tc-92-u8p">
-                                <rect key="frame" x="94" y="398" width="210" height="25"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jEQ-qM-LG4">
+                                <rect key="frame" x="94" y="128" width="210" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,7 +316,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="aZQ-yp-3hD"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="WX2-Qo-bbg">
                             <connections>
-                                <action selector="tapSave:" destination="N7X-en-4uf" id="qyo-No-IMy"/>
+                                <action selector="tapSave:" destination="N7X-en-4uf" id="7pq-My-LGE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -334,7 +334,7 @@
         <!--NEXT-US NEWS-->
         <scene sceneID="HXb-kA-T1N">
             <objects>
-                <viewController id="uNN-8D-bNN" sceneMemberID="viewController">
+                <viewController id="uNN-8D-bNN" customClass="NXDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5y4-kK-Q0i"/>
                         <viewControllerLayoutGuide type="bottom" id="rbw-zh-mTX"/>
@@ -395,6 +395,12 @@ NHN 교수진들은 재단 내 조직도에도 학교분야가 사라졌고, 교
                         <barButtonItem key="backBarButtonItem" title="Back" id="Vmo-iN-25y"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="o9m-hS-Kcr"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detail_contents" destination="9vd-Qe-TBY" id="n7B-Xx-HrM"/>
+                        <outlet property="detail_img" destination="vj9-OZ-aK4" id="cdi-m5-3lM"/>
+                        <outlet property="detail_time" destination="Dat-su-iib" id="ZXY-dy-Z2a"/>
+                        <outlet property="detail_title" destination="mGC-xR-fNQ" id="Jrl-zw-daN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOb-k7-RIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

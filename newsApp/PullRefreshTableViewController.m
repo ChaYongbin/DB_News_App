@@ -153,8 +153,4 @@
     [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2.0];
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
-
 @end

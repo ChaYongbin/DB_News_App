@@ -7,6 +7,7 @@
 //
 
 #import "NXWriteViewController.h"
+#import "NXNewsTableViewController.h"
 
 @interface NXWriteViewController ()
 
@@ -26,7 +27,7 @@
 
 - (IBAction)tapSave:(id)sender {
     NSString * title = [self.writeTitle text];
-    NSString * img_path = @"http://cfile7.uf.tistory.com/image/157DD34B502D1C21224CC3";
+    NSString * img_path = [self.imgURL text];
     NSString * contents = [self.writeContents text];
     NSString * user_email = [self.writeAuthor text];
     
@@ -43,11 +44,9 @@
     NSData * resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&sResponse error:&error];
     NSLog(@"response = %ld", (long)sResponse.statusCode);
     NSLog(@"result = %@", [NSString stringWithUTF8String:resultData.bytes] );
+
+    
 }
-
-
-
-
 
 /*
 #pragma mark - Navigation
