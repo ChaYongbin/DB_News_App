@@ -90,6 +90,9 @@ def Connect_Test():
 		return 'Success Connect Server'
 	return 'Fail Connect Server'
 
+def date_handler(obj):
+    return obj.isoformat() if hasattr(obj, 'isoformat') else obj
+
 #News Data Get and Push
 @app.route('/news', methods=['GET','POST'])
 def news():
@@ -106,7 +109,8 @@ def news():
 	print(result)
 
 	if result != None:
-		return json.dumps(result)
+		print json.dumps(result, default=date_handler)
+		return json.dumps(result, default=date_handler)
 	return 'Get Error'
 
 
