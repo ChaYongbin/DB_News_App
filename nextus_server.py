@@ -130,18 +130,16 @@ def comment():
 
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
-	if request.methods == 'POST':
-		title = request.form[title]
-		img_path = request.form[img_path]
-		contents = request.form[contents]
-		user_email = request.form[user_email]
+	title = request.form[title]
+	img_path = request.form[img_path]
+	contents = request.form[contents]
+	user_email = request.form[user_email]
 
-		con = mysql.connect()
-		cursor = con.cursor()
-		cursor.execute("INSERT INTO article (title, img_path, contents, user_email) VALUES ('" + title + "','" + img_path + "', '" + contents + "', '" + user_email + "' );")
-		con.commit()
-		return 'Success'
-	return 'error'
+	con = mysql.connect()
+	cursor = con.cursor()
+	cursor.execute("INSERT INTO article (title, img_path, contents, user_email) VALUES ('" + title + "','" + img_path + "', '" + contents + "', '" + user_email + "' );")
+	con.commit()
+	return 'Success'
 
 @app.route("/test", methods=["GET", "POST"])
 def test():
