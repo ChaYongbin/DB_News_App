@@ -25,9 +25,8 @@
 }
 
 - (IBAction)tapSave:(id)sender {
-    http://cfile7.uf.tistory.com/image/157DD34B502D1C21224CC3
     NSString * title = [self.writeTitle text];
-    NSString * img_path = [self.imgURL text];
+    NSString * img_path = @"http://cfile7.uf.tistory.com/image/157DD34B502D1C21224CC3";
     NSString * contents = [self.writeContents text];
     NSString * user_email = [self.writeAuthor text];
     
