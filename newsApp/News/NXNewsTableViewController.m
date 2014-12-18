@@ -62,7 +62,7 @@
         NSString *img_path_data = [dataDict objectForKey:@"img_path"];
         NSString *contents_data = [dataDict objectForKey:@"contents"];
         NSString *user_email_data = [dataDict objectForKey:@"user_email"];
-        NSString *time_data = [dataDict objectForKey:@"time"];
+        NSDate *time_data = [dataDict objectForKey:@"time"];
         
         NSLog(@"TITLE: %@",title_data);
         NSLog(@"URL: %@",img_path_data);
