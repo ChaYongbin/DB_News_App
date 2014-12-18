@@ -13,7 +13,7 @@
     NSMutableArray * myObject;
     NSDictionary * dictionary;
     NSString * title;
-    NSString * link;
+    NSString * img_path;
 }
 
 @end
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     title = @"title";
-    link = @"link";
+    img_path = @"img_path";
     
     myObject = [[NSMutableArray alloc] init];
     
@@ -46,10 +46,26 @@
 //    NSLog(@"response = %ld", (long)response.statusCode);
 //    NSLog(@"result = %@", result);
     
-    NSString * URLString = @"http://10.73.45.55:5000/news";
+//  NSString * URLString = @"http://10.73.45.55:5000/news";
     
-    NSData * jsonSoure = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://10.73.45.55:5000/news"]];
+    NSData * jsonSource  = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://10.73.45.55:5000/news"]];
     
+    id jsonObjects = [NSJSONSerialization JSONObjectWithData:
+                      jsonSource options:NSJSONReadingMutableContainers error:nil];
+    
+    for (NSDictionary *dataDict in jsonObjects) {
+        NSString *title_data = [dataDict objectForKey:@"title"];
+        NSString *img_path_data = [dataDict objectForKey:@"img_path"];
+        
+        NSLog(@"TITLE: %@",title_data);
+        NSLog(@"URL: %@",img_path_data);
+        
+        dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                      title_data, title,
+                      img_path_data, img_path,
+                      nil];
+        [myObject addObject:dictionary];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -70,14 +86,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return myObject.count;;
 }
 
 
 - (NXNewsTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NXNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell" forIndexPath:indexPath];
     
-    cell.news_Title.text = @"'NHN넥스트' 사태 타 기관에도 불똥?";
+    if (cell == nil) {
+        cell = [[NXNewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"newsCell" ];
+    }
+    
+    NSDictionary *tmpDict = [myObject objectAtIndex:indexPath.row];
+    
+    NSMutableString *text;
+    //text = [NSString stringWithFormat:@"%@",[tmpDict objectForKey:title]];
+    text = [NSMutableString stringWithFormat:@"%@",
+            [tmpDict objectForKeyedSubscript:title]];
+    
+    NSURL *url = [NSURL URLWithString:[tmpDict objectForKey:img_path]];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc]initWithData:data];
+    
+    cell.news_Title.text = text;
+    cell.news_Img.frame = CGRectMake(0,0,80,70);
+    cell.news_Img.image = img;
     
     return cell;
 }
