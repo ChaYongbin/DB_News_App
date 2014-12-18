@@ -106,7 +106,7 @@ def news():
 	print(result)
 
 	if result != None:
-		return json.dumps(result, default=date_handler)
+		return json.dumps(result)
 	return 'Get Error'
 
 
