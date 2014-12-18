@@ -140,7 +140,7 @@
     
     _detailView.titleField = [diction objectForKey:@"title"];
     _detailView.contentsField = [diction objectForKey:@"contents"];
-    _detailView.detail_time = [diction objectForKey:@"time"];
+    _detailView.timeField = [diction objectForKey:@"time"];
     
     
     NSString* string = [NSString stringWithFormat:

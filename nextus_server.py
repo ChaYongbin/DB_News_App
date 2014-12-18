@@ -93,7 +93,7 @@ def Connect_Test():
 @app.route('/news', methods=['GET','POST'])
 def news():
 	cursor = connectDB()
-	cursor.execute('SELECT title, img_path FROM article;')
+	cursor.execute('SELECT title, img_path, contents, time, user_email FROM article;')
 
 	result = []
 
@@ -112,7 +112,7 @@ def news():
 @app.route('/news/comment', methods=['GET','POST'])
 def comment():
 	cursor = connectDB()
-	cursor.execute('SELECT title, img_path FROM article;')
+	cursor.execute('SELECT article_id, contents, user_email FROM comment;')
 
 	result = []
 
@@ -138,6 +138,19 @@ def upload():
 	con = mysql.connect()
 	cursor = con.cursor()
 	cursor.execute("INSERT INTO article (title, img_path, contents, user_email) VALUES ('" + title + "','" + img_path + "', '" + contents + "', '" + user_email + "' );")
+	con.commit()
+	return 'Success'
+
+
+@app.route("/upload/comment", methods=["GET", "POST"])
+def comment_upload():
+	article_id = request.form['article_id']
+	contents = request.form['contents']
+	user_email = request.form['user_email']
+
+	con = mysql.connect()
+	cursor = con.cursor()
+	cursor.execute("INSERT INTO article (article_id, contents, user_email) VALUES ('" + article_id + "', '" + contents + "', '" + user_email + "' );")
 	con.commit()
 	return 'Success'
 
