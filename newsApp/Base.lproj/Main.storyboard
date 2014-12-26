@@ -22,7 +22,7 @@
                                 <color key="textColor" red="0.15686274509803921" green="0.34509803921568627" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="아이디를 입력하세요." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-Vv-JQJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-Vv-JQJ">
                                 <rect key="frame" x="117" y="214" width="187" height="30"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.68627450980392157" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,6 +54,9 @@
                                     <color key="titleColor" red="0.99215686274509807" green="0.95686274509803926" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rDs-yp-Hpk" kind="push" id="odx-ZD-RXW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-CV-6wK">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -67,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="비밀번호를 입력하세요." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-GO-xRS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-GO-xRS">
                                 <rect key="frame" x="117" y="287" width="187" height="30"/>
                                 <color key="textColor" red="0.23921568627450981" green="0.68627450980392157" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -84,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c4-fV-uTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="644"/>
+            <point key="canvasLocation" x="-705" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J2I-Ho-hKG">
@@ -95,12 +98,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rDs-yp-Hpk" kind="relationship" relationship="rootViewController" id="BSl-20-1Xz"/>
+                        <segue destination="F54-DW-qPw" kind="relationship" relationship="rootViewController" id="XMc-X5-dnJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tp-lL-aaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-541" y="259"/>
+            <point key="canvasLocation" x="-1131" y="250"/>
         </scene>
         <!--NEWS-->
         <scene sceneID="mkf-Ar-yFa">
@@ -255,33 +258,33 @@
         <scene sceneID="HXb-kA-T1N">
             <objects>
                 <viewController id="uNN-8D-bNN" customClass="NXDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yzl-2v-FBn"/>
-                        <viewControllerLayoutGuide type="bottom" id="iwm-Y6-1fX"/>
-                    </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="dhm-I3-VqQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="comment_table" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qY8-Vn-lMY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-OZ-aK4">
-                                <rect key="frame" x="71" y="145" width="178" height="120"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2014.12.17  10:51:27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dat-su-iib">
-                                <rect key="frame" x="16" y="123" width="270" height="14"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'NHN넥스트' 사태 타 기관에도 불똥?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGC-xR-fNQ">
-                                <rect key="frame" x="16" y="72" width="270" height="54"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vd-Qe-TBY">
-                                <rect key="frame" x="16" y="273" width="288" height="107"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">네이버의 일방적인 조직 및 교육과정 개편 등으로 논란이 되고 있는 'NHN 넥스트' 사태가 더욱 확산될 전망이다.
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="mJR-Va-ZFC">
+                            <rect key="frame" x="0.0" y="64" width="320" height="376"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPB-gU-Qnn">
+                                    <rect key="frame" x="71" y="83" width="178" height="120"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="'NHN넥스트' 사태 타 기관에도 불똥?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3A-5c-hGc">
+                                    <rect key="frame" x="24" y="8" width="270" height="54"/>
+                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2014.12.17  10:51:27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-z2-Rdf">
+                                    <rect key="frame" x="24" y="61" width="270" height="14"/>
+                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjV-12-pGl">
+                                    <rect key="frame" x="16" y="211" width="288" height="107"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">네이버의 일방적인 조직 및 교육과정 개편 등으로 논란이 되고 있는 'NHN 넥스트' 사태가 더욱 확산될 전망이다.
 
 17일 관련업계에 따르면 최근 NHN넥스트 교수(연구원)진이 조직 및 교육과정 개편에 반대하는 내용의 성명서를 발표한 데 이어 이같은 움직임이 타 교육기관으로도 번질 조짐을 보이고 있다.
 
@@ -292,49 +295,68 @@ NHN 교수진들은 재단 내 조직도에도 학교분야가 사라졌고, 교
 네이버는 이와 관련해 정체성 훼손이 아니라 취지를 더욱 잘 살릴 수 있는 방안을 찾기 위한 조치였다고 반박하고 있다. 특히 '실무형 소프트웨어 인재 양성'과 관련된 부분에 대해 일부 교수진과 학생들이 오해하고 있다는 것이다.
 
 네이버 한 관계자는 "넥스트 재단은 이미 졸업 등을 앞두고 있거나, 교육이 진행 중인 1‧2기 학생들에게 약속했던 교육을 충실히 제공해 피해가 없도록 할 것"이라며 "더불어 소프트웨어 인재 양성을 위해 의미 있는 노력도 계속해 나갈 것"이라고 말했다.</string>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buX-MN-FVf">
-                                <rect key="frame" x="16" y="388" width="233" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh6-Fd-IkF">
-                                <rect key="frame" x="256" y="388" width="30" height="30"/>
-                                <state key="normal" title="저장">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y8V-xg-AIL">
-                                <rect key="frame" x="16" y="426" width="288" height="134"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3s4-j7-SPo">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3s4-j7-SPo" id="s0Q-io-JZ1">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLK-fm-dLK">
+                                    <rect key="frame" x="16" y="326" width="233" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSA-Pc-hWk">
+                                    <rect key="frame" x="264" y="326" width="30" height="30"/>
+                                    <state key="normal" title="저장">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="commentSave:" destination="uNN-8D-bNN" eventType="touchDown" id="rdb-2z-SIT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="44" id="9CT-Op-ZjV" customClass="commentCell">
+                                <rect key="frame" x="0.0" y="165" width="320" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9CT-Op-ZjV" id="rRW-9i-Nci">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f7-kr-WBy">
+                                            <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.96470588239999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="Label" destination="0f7-kr-WBy" id="lfC-na-0yo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="delegate" destination="uNN-8D-bNN" id="ZKR-z7-bTf"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" title="NEXT-US NEWS" id="EjG-00-b66">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Vmo-iN-25y"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="o9m-hS-Kcr"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="detail_contents" destination="9vd-Qe-TBY" id="n7B-Xx-HrM"/>
-                        <outlet property="detail_img" destination="vj9-OZ-aK4" id="cdi-m5-3lM"/>
-                        <outlet property="detail_time" destination="Dat-su-iib" id="ZXY-dy-Z2a"/>
-                        <outlet property="detail_title" destination="mGC-xR-fNQ" id="Jrl-zw-daN"/>
+                        <outlet property="commentField" destination="kLK-fm-dLK" id="KLc-TC-VQd"/>
+                        <outlet property="detail_contents" destination="sjV-12-pGl" id="h7V-cA-SCi"/>
+                        <outlet property="detail_img" destination="bPB-gU-Qnn" id="Bew-r6-bX9"/>
+                        <outlet property="detail_time" destination="H6B-z2-Rdf" id="57M-bn-sRi"/>
+                        <outlet property="detail_title" destination="p3A-5c-hGc" id="CTu-K8-eCk"/>
+                        <outlet property="saveButton" destination="zSA-Pc-hWk" id="obZ-To-GSx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOb-k7-RIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="-108"/>
+            <point key="canvasLocation" x="382" y="-106"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

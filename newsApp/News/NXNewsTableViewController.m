@@ -9,6 +9,7 @@
 #import "NXNewsTableViewController.h"
 #import "NXNewsTableViewCell.h"
 #import "NXDetailViewController.h"
+#import "PullRefreshTableViewController.h"
 
 @interface NXNewsTableViewController () {
     NSMutableArray * myObject;
@@ -34,26 +35,6 @@
     time = @"time";
     
     myObject = [[NSMutableArray alloc] init];
-    
-//    NSString * URLString = @"http://10.73.45.55:5000/register/email";
-//    NSString * FormData = [NSString stringWithFormat:@"email=%@",email];
-//    NSURL * url = [NSURL URLWithString:URLString];
-//    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
-//    
-//    [request setHTTPMethod:@"POST"];
-//    [request setHTTPBody:[FormData dataUsingEncoding:NSUTF8StringEncoding]];
-//    
-//    NSHTTPURLResponse * response;
-//    NSError * error;
-//    NSData * resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-//    
-//    NSString * result = [NSString stringWithUTF8String:resultData.bytes];
-//    //result = [NSString stringWithFormat:@"%s"];
-//    
-//    NSLog(@"response = %ld", (long)response.statusCode);
-//    NSLog(@"result = %@", result);
-    
-//  NSString * URLString = @"http://10.73.45.55:5000/news";
     
     NSData * jsonSource  = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://10.73.45.55:5000/news"]];
     
@@ -87,6 +68,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData]; // to reload selected cell
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -99,7 +85,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return myObject.count;;
+    return myObject.count;
 }
 
 
@@ -108,6 +94,32 @@
     
     if (cell == nil) {
         cell = [[NXNewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"newsCell" ];
+    }
+    myObject = [[NSMutableArray alloc] init];
+    
+    NSData * jsonSource  = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://10.73.45.55:5000/news"]];
+    
+    id jsonObjects = [NSJSONSerialization JSONObjectWithData:
+                      jsonSource options:NSJSONReadingMutableContainers error:nil];
+    
+    for (NSDictionary *dataDict in jsonObjects) {
+        NSString *title_data = [dataDict objectForKey:@"title"];
+        NSString *img_path_data = [dataDict objectForKey:@"img_path"];
+        NSString *contents_data = [dataDict objectForKey:@"contents"];
+        NSString *user_email_data = [dataDict objectForKey:@"user_email"];
+        NSString *time_data = [dataDict objectForKey:@"time"];
+        
+        NSLog(@"TITLE: %@",title_data);
+        NSLog(@"URL: %@",img_path_data);
+        
+        dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                      title_data, title,
+                      img_path_data, img_path,
+                      contents_data, contents,
+                      user_email_data, user_email,
+                      time_data, time,
+                      nil];
+        [myObject addObject:dictionary];
     }
     
     NSDictionary *tmpDict = [myObject objectAtIndex:indexPath.row];
@@ -153,6 +165,16 @@
     _detailView.imageField = string;
     }
 }
+
+- (void)refresh {
+    [self performSelector:@selector(addItem) withObject:nil afterDelay:2.0];
+}
+
+- (void)addItem {
+    // Add a new time
+    [self.tableView reloadData];
+}
+
 
 
 /*

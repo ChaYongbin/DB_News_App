@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NXDetailViewController : UIViewController
+@interface NXDetailViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+
 @property NSDictionary * selectedData;
 @property NSString *imageField;
 @property NSString *titleField;
@@ -18,5 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *detail_time;
 @property (weak, nonatomic) IBOutlet UIImageView *detail_img;
 @property (weak, nonatomic) IBOutlet UITextView *detail_contents;
+@property (weak, nonatomic) IBOutlet UITextField *commentField;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+//@property (strong, nonatomic) IBOutlet UITableView *comment_table;
 
 @end

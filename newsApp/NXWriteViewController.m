@@ -45,7 +45,8 @@
     NSData * resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&sResponse error:&error];
     NSLog(@"response = %ld", (long)sResponse.statusCode);
     NSLog(@"result = %@", [NSString stringWithUTF8String:resultData.bytes] );
-    
+    NXNewsTableViewController * pre = [[NXNewsTableViewController alloc] init];
+    [pre viewDidLoad];
 }
 
 
