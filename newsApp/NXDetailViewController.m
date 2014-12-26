@@ -91,10 +91,7 @@
 }
 
 - (IBAction)commentSave:(id)sender {
-    NSString * article_id = @"18";
     NSString * a_contents = [self.commentField text];
-    NSString * user_email = @"test@test.com";
-    
     NSString * URLString = @"http://10.73.45.55:5000/upload/comment";
     NSString * FormData = [NSString stringWithFormat:@"article_id=%@&contents=%@&user_email=%@",article_id,a_contents,user_email];
     NSURL * url = [NSURL URLWithString:URLString];
