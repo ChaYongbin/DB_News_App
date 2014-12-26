@@ -10,16 +10,14 @@
 		344D299F1A250B5E00C490F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D299E1A250B5E00C490F1 /* main.m */; };
 		344D29A21A250B5E00C490F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D29A11A250B5E00C490F1 /* AppDelegate.m */; };
 		344D29A51A250B5E00C490F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D29A41A250B5E00C490F1 /* ViewController.m */; };
-		344D29A81A250B5E00C490F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344D29A61A250B5E00C490F1 /* Main.storyboard */; };
 		344D29AA1A250B5E00C490F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344D29A91A250B5E00C490F1 /* Images.xcassets */; };
 		344D29AD1A250B5E00C490F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344D29AB1A250B5E00C490F1 /* LaunchScreen.xib */; };
 		344D29B91A250B5E00C490F1 /* newsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 344D29B81A250B5E00C490F1 /* newsAppTests.m */; };
 		34C3EB0D1A422F710099ED3F /* NXNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */; };
 		34C3EB101A4230110099ED3F /* NXNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */; };
-		34C3EB161A4249C60099ED3F /* NXWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB151A4249C60099ED3F /* NXWriteViewController.m */; };
-		34C3EB181A4262AA0099ED3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34C3EB171A4262AA0099ED3F /* QuartzCore.framework */; };
-		34C3EB1B1A4263DD0099ED3F /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */; };
 		34C3EB1E1A428B390099ED3F /* NXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */; };
+		34C3EB271A42C4DB0099ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C3EB251A42C4DB0099ED3F /* Main.storyboard */; };
+		34C3EB2D1A42C7610099ED3F /* NXWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C3EB2C1A42C7610099ED3F /* NXWriteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +38,6 @@
 		344D29A11A250B5E00C490F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		344D29A31A250B5E00C490F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		344D29A41A250B5E00C490F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		344D29A71A250B5E00C490F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		344D29A91A250B5E00C490F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		344D29AC1A250B5E00C490F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		344D29B21A250B5E00C490F1 /* newsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = newsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,13 +47,11 @@
 		34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXNewsTableViewCell.m; path = News/NXNewsTableViewCell.m; sourceTree = "<group>"; };
 		34C3EB0E1A4230110099ED3F /* NXNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXNewsTableViewController.h; path = News/NXNewsTableViewController.h; sourceTree = "<group>"; };
 		34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXNewsTableViewController.m; path = News/NXNewsTableViewController.m; sourceTree = "<group>"; };
-		34C3EB141A4249C60099ED3F /* NXWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NXWriteViewController.h; path = Write/NXWriteViewController.h; sourceTree = "<group>"; };
-		34C3EB151A4249C60099ED3F /* NXWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NXWriteViewController.m; path = Write/NXWriteViewController.m; sourceTree = "<group>"; };
-		34C3EB171A4262AA0099ED3F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		34C3EB191A4263DD0099ED3F /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
-		34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		34C3EB1C1A428B390099ED3F /* NXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXDetailViewController.h; sourceTree = "<group>"; };
 		34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXDetailViewController.m; sourceTree = "<group>"; };
+		34C3EB261A42C4DB0099ED3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34C3EB2C1A42C7610099ED3F /* NXWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXWriteViewController.m; sourceTree = "<group>"; };
+		34C3EB2E1A42C7CD0099ED3F /* NXWriteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NXWriteViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C3EB181A4262AA0099ED3F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +75,6 @@
 		344D29901A250B5E00C490F1 = {
 			isa = PBXGroup;
 			children = (
-				34C3EB171A4262AA0099ED3F /* QuartzCore.framework */,
 				344D299B1A250B5E00C490F1 /* newsApp */,
 				344D29B51A250B5E00C490F1 /* newsAppTests */,
 				344D299A1A250B5E00C490F1 /* Products */,
@@ -104,17 +97,15 @@
 				344D29A11A250B5E00C490F1 /* AppDelegate.m */,
 				34C3EB0B1A422F710099ED3F /* NXNewsTableViewCell.h */,
 				34C3EB0C1A422F710099ED3F /* NXNewsTableViewCell.m */,
-				34C3EB141A4249C60099ED3F /* NXWriteViewController.h */,
-				34C3EB151A4249C60099ED3F /* NXWriteViewController.m */,
+				34C3EB2E1A42C7CD0099ED3F /* NXWriteViewController.h */,
+				34C3EB2C1A42C7610099ED3F /* NXWriteViewController.m */,
 				34C3EB1C1A428B390099ED3F /* NXDetailViewController.h */,
+				34C3EB251A42C4DB0099ED3F /* Main.storyboard */,
 				34C3EB1D1A428B390099ED3F /* NXDetailViewController.m */,
 				34C3EB0E1A4230110099ED3F /* NXNewsTableViewController.h */,
-				34C3EB191A4263DD0099ED3F /* PullRefreshTableViewController.h */,
-				34C3EB1A1A4263DD0099ED3F /* PullRefreshTableViewController.m */,
 				34C3EB0F1A4230110099ED3F /* NXNewsTableViewController.m */,
 				344D29A31A250B5E00C490F1 /* ViewController.h */,
 				344D29A41A250B5E00C490F1 /* ViewController.m */,
-				344D29A61A250B5E00C490F1 /* Main.storyboard */,
 				344D29A91A250B5E00C490F1 /* Images.xcassets */,
 				344D29AB1A250B5E00C490F1 /* LaunchScreen.xib */,
 				344D299C1A250B5E00C490F1 /* Supporting Files */,
@@ -228,8 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344D29A81A250B5E00C490F1 /* Main.storyboard in Resources */,
 				344D29AD1A250B5E00C490F1 /* LaunchScreen.xib in Resources */,
+				34C3EB271A42C4DB0099ED3F /* Main.storyboard in Resources */,
 				344D29AA1A250B5E00C490F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,13 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C3EB1B1A4263DD0099ED3F /* PullRefreshTableViewController.m in Sources */,
 				344D29A51A250B5E00C490F1 /* ViewController.m in Sources */,
 				344D29A21A250B5E00C490F1 /* AppDelegate.m in Sources */,
 				34C3EB1E1A428B390099ED3F /* NXDetailViewController.m in Sources */,
 				34C3EB101A4230110099ED3F /* NXNewsTableViewController.m in Sources */,
+				34C3EB2D1A42C7610099ED3F /* NXWriteViewController.m in Sources */,
 				34C3EB0D1A422F710099ED3F /* NXNewsTableViewCell.m in Sources */,
-				34C3EB161A4249C60099ED3F /* NXWriteViewController.m in Sources */,
 				344D299F1A250B5E00C490F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,20 +268,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		344D29A61A250B5E00C490F1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				344D29A71A250B5E00C490F1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		344D29AB1A250B5E00C490F1 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				344D29AC1A250B5E00C490F1 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		34C3EB251A42C4DB0099ED3F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34C3EB261A42C4DB0099ED3F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

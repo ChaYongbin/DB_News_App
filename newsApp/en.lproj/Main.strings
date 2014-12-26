@@ -1,0 +1,63 @@
+
+/* Class = "IBUILabel"; text = "작성자"; ObjectID = "1yN-hv-lcR"; */
+"1yN-hv-lcR.text" = "작성자";
+
+/* Class = "IBUILabel"; text = "NEWS"; ObjectID = "2Kg-59-HmF"; */
+"2Kg-59-HmF.text" = "NEWS";
+
+/* Class = "IBUILabel"; text = "기사 내용"; ObjectID = "4Nz-Gb-3Tm"; */
+"4Nz-Gb-3Tm.text" = "기사 내용";
+
+/* Class = "IBUITextView"; text = "네이버의 일방적인 조직 및 교육과정 개편 등으로 논란이 되고 있는 'NHN 넥스트' 사태가 더욱 확산될 전망이다.\n\n17일 관련업계에 따르면 최근 NHN넥스트 교수(연구원)진이 조직 및 교육과정 개편에 반대하는 내용의 성명서를 발표한 데 이어 이같은 움직임이 타 교육기관으로도 번질 조짐을 보이고 있다.\n\nNHN 교수진들은 재단 내 조직도에도 학교분야가 사라졌고, 교수들 역시 '연구원' 신분으로 8개 신규 사업에 나눠 배치됐다며 정체정이 무너졌다고 주장했다.\n\n이들은 네이버측이 당초 약속했던 창의적인 인재양성이 아니라 실무위주의 취업교육에 중점을 두는 것 아니냐며 강한 불만을 털어놓고 있다.\n\n네이버는 이와 관련해 정체성 훼손이 아니라 취지를 더욱 잘 살릴 수 있는 방안을 찾기 위한 조치였다고 반박하고 있다. 특히 '실무형 소프트웨어 인재 양성'과 관련된 부분에 대해 일부 교수진과 학생들이 오해하고 있다는 것이다.\n\n네이버 한 관계자는 \"넥스트 재단은 이미 졸업 등을 앞두고 있거나, 교육이 진행 중인 1‧2기 학생들에게 약속했던 교육을 충실히 제공해 피해가 없도록 할 것\"이라며 \"더불어 소프트웨어 인재 양성을 위해 의미 있는 노력도 계속해 나갈 것\"이라고 말했다."; ObjectID = "9vd-Qe-TBY"; */
+"9vd-Qe-TBY.text" = "네이버의 일방적인 조직 및 교육과정 개편 등으로 논란이 되고 있는 'NHN 넥스트' 사태가 더욱 확산될 전망이다.\n\n17일 관련업계에 따르면 최근 NHN넥스트 교수(연구원)진이 조직 및 교육과정 개편에 반대하는 내용의 성명서를 발표한 데 이어 이같은 움직임이 타 교육기관으로도 번질 조짐을 보이고 있다.\n\nNHN 교수진들은 재단 내 조직도에도 학교분야가 사라졌고, 교수들 역시 '연구원' 신분으로 8개 신규 사업에 나눠 배치됐다며 정체정이 무너졌다고 주장했다.\n\n이들은 네이버측이 당초 약속했던 창의적인 인재양성이 아니라 실무위주의 취업교육에 중점을 두는 것 아니냐며 강한 불만을 털어놓고 있다.\n\n네이버는 이와 관련해 정체성 훼손이 아니라 취지를 더욱 잘 살릴 수 있는 방안을 찾기 위한 조치였다고 반박하고 있다. 특히 '실무형 소프트웨어 인재 양성'과 관련된 부분에 대해 일부 교수진과 학생들이 오해하고 있다는 것이다.\n\n네이버 한 관계자는 \"넥스트 재단은 이미 졸업 등을 앞두고 있거나, 교육이 진행 중인 1‧2기 학생들에게 약속했던 교육을 충실히 제공해 피해가 없도록 할 것\"이라며 \"더불어 소프트웨어 인재 양성을 위해 의미 있는 노력도 계속해 나갈 것\"이라고 말했다.";
+
+/* Class = "IBUILabel"; text = "2014.12.17  10:51:27"; ObjectID = "Dat-su-iib"; */
+"Dat-su-iib.text" = "2014.12.17  10:51:27";
+
+/* Class = "IBUINavigationItem"; title = "NEXT-US NEWS"; ObjectID = "EjG-00-b66"; */
+"EjG-00-b66.title" = "NEXT-US NEWS";
+
+/* Class = "IBUINavigationItem"; title = "NEWS"; ObjectID = "MB0-fW-XS1"; */
+"MB0-fW-XS1.title" = "NEWS";
+
+/* Class = "IBUILabel"; text = "기사 제목"; ObjectID = "PSA-hd-MFl"; */
+"PSA-hd-MFl.text" = "기사 제목";
+
+/* Class = "IBUILabel"; text = "첨부 사진"; ObjectID = "PlM-tD-NlH"; */
+"PlM-tD-NlH.text" = "첨부 사진";
+
+/* Class = "IBUINavigationItem"; title = "새글쓰기"; ObjectID = "QWq-fI-iGb"; */
+"QWq-fI-iGb.title" = "새글쓰기";
+
+/* Class = "IBUILabel"; text = "ID"; ObjectID = "UCW-hZ-2yy"; */
+"UCW-hZ-2yy.text" = "ID";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Vmo-iN-25y"; */
+"Vmo-iN-25y.title" = "Back";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "aZQ-yp-3hD"; */
+"aZQ-yp-3hD.title" = "Back";
+
+/* Class = "IBUITextField"; text = "비밀번호를 입력하세요."; ObjectID = "bgh-GO-xRS"; */
+"bgh-GO-xRS.text" = "비밀번호를 입력하세요.";
+
+/* Class = "IBUIButton"; normalTitle = "LOGIN"; ObjectID = "dZ6-Ed-mTY"; */
+"dZ6-Ed-mTY.normalTitle" = "LOGIN";
+
+/* Class = "IBUILabel"; text = "NEXTUS"; ObjectID = "eAh-9e-HZU"; */
+"eAh-9e-HZU.text" = "NEXTUS";
+
+/* Class = "IBUILabel"; text = "'NHN넥스트' 사태 타 기관에도 불똥?"; ObjectID = "mGC-xR-fNQ"; */
+"mGC-xR-fNQ.text" = "'NHN넥스트' 사태 타 기관에도 불똥?";
+
+/* Class = "IBUITextField"; text = "아이디를 입력하세요."; ObjectID = "p4R-Vv-JQJ"; */
+"p4R-Vv-JQJ.text" = "아이디를 입력하세요.";
+
+/* Class = "IBUIButton"; normalTitle = "기자가 아니세요? 여러분도 뉴스 기자가 될 수 있습니다."; ObjectID = "pRg-aN-ZL9"; */
+"pRg-aN-ZL9.normalTitle" = "기자가 아니세요? 여러분도 뉴스 기자가 될 수 있습니다.";
+
+/* Class = "IBUILabel"; text = "'NHN넥스트' 사태 타 기관에도 불똥?"; ObjectID = "phe-Iy-wgO"; */
+"phe-Iy-wgO.text" = "'NHN넥스트' 사태 타 기관에도 불똥?";
+
+/* Class = "IBUILabel"; text = "PASSWORD"; ObjectID = "phx-q4-6tP"; */
+"phx-q4-6tP.text" = "PASSWORD";

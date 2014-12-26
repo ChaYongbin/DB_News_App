@@ -29,6 +29,9 @@
     
     title = @"title";
     img_path = @"img_path";
+    contents = @"contents";
+    user_email = @"user_email";
+    time = @"time";
     
     myObject = [[NSMutableArray alloc] init];
     
@@ -62,7 +65,7 @@
         NSString *img_path_data = [dataDict objectForKey:@"img_path"];
         NSString *contents_data = [dataDict objectForKey:@"contents"];
         NSString *user_email_data = [dataDict objectForKey:@"user_email"];
-        NSDate *time_data = [dataDict objectForKey:@"time"];
+        NSString *time_data = [dataDict objectForKey:@"time"];
         
         NSLog(@"TITLE: %@",title_data);
         NSLog(@"URL: %@",img_path_data);
@@ -134,6 +137,8 @@
 //}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"detail"]) {
+    
     NXDetailViewController * _detailView = segue.destinationViewController;
     NSIndexPath* idxPath = [self.tableView indexPathForSelectedRow];
     NSDictionary * diction = [myObject objectAtIndex:idxPath.row];
@@ -146,6 +151,7 @@
     NSString* string = [NSString stringWithFormat:
                         @"%@",[diction objectForKey:@"img_path"]];;
     _detailView.imageField = string;
+    }
 }
 
 
